@@ -31,7 +31,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Sertão Maker</h3>
             <p className="text-primary-foreground/80 mb-6 leading-relaxed">
-              Transformando ideias do semiárido em soluções para o mundo através 
+              Transformando ideias do Sertão Central em soluções para o mundo através 
               de inovação, empreendedorismo e impacto social.
             </p>
             <div className="flex space-x-3">

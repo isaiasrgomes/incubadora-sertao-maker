@@ -6,7 +6,7 @@ const AboutSection = () => {
     {
       icon: Target,
       title: "Impacto Local",
-      description: "Focamos em soluções que atendam às necessidades específicas do semiárido brasileiro."
+      description: "Focamos em soluções que atendam às necessidades específicas do Sertão Central brasileiro."
     },
     {
       icon: Users,
@@ -64,7 +64,7 @@ const AboutSection = () => {
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
               Ser reconhecida como a principal ponte entre o potencial empreendedor do 
-              semiárido e as oportunidades de inovação nacional e internacional, 
+              Sertão Central e as oportunidades de inovação nacional e internacional, 
               contribuindo para o desenvolvimento socioeconômico sustentável da região.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">

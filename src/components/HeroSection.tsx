@@ -21,7 +21,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-background/20 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 text-white mb-6">
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-medium">Inovação no Semiárido</span>
+            <span className="text-sm font-medium">Inovação no Sertão Central</span>
           </div>
 
           {/* Main Heading */}
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            A primeira incubadora de startups do semiárido brasileiro, conectando 
+            A primeira incubadora de startups do Sertão Central brasileiro, conectando 
             inovação, empreendedorismo e impacto social.
           </p>
 

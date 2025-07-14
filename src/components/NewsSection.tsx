@@ -1,17 +1,28 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, ArrowRight, Users, Megaphone } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Users, Megaphone, Filter } from "lucide-react";
+import { useState } from "react";
+
+import partnershipSebraeImage from "@/assets/news/partnership-sebrae.jpg";
+import demoDayImage from "@/assets/news/demo-day.jpg";
+import preIncubacaoImage from "@/assets/news/pre-incubacao.jpg";
+import workshopInovacaoImage from "@/assets/news/workshop-inovacao.jpg";
+import agtechStartupImage from "@/assets/news/agtech-startup.jpg";
+import edtechPlatformImage from "@/assets/news/edtech-platform.jpg";
 
 const NewsSection = () => {
+  const [selectedCategory, setSelectedCategory] = useState("todas");
+
   const news = [
     {
       type: "noticia",
       title: "Sertão Maker anuncia parceria com Sebrae para expansão de programas",
-      excerpt: "Nova parceria visa ampliar o alcance dos programas de incubação para mais 50 municípios do semiárido.",
+      excerpt: "Nova parceria visa ampliar o alcance dos programas de incubação para mais 50 municípios do Sertão Central.",
       date: "15 Jan 2024",
       readTime: "3 min",
-      category: "Parcerias"
+      category: "Parcerias",
+      image: partnershipSebraeImage
     },
     {
       type: "evento",
@@ -19,7 +30,8 @@ const NewsSection = () => {
       excerpt: "Evento presencial onde as startups apresentam seus projetos para investidores e parceiros.",
       date: "25 Mar 2024",
       readTime: "3 horas",
-      category: "Eventos"
+      category: "Eventos",
+      image: demoDayImage
     },
     {
       type: "processo",
@@ -27,9 +39,43 @@ const NewsSection = () => {
       excerpt: "Inscrições abertas para o programa de pré-incubação. Prazo final: 20 de fevereiro.",
       date: "Até 20 Fev",
       readTime: "Candidatura",
-      category: "Editais"
+      category: "Editais",
+      image: preIncubacaoImage
+    },
+    {
+      type: "evento",
+      title: "Workshop de Inovação no Sertão Central",
+      excerpt: "Capacitação gratuita em metodologias de inovação e design thinking para empreendedores locais.",
+      date: "10 Fev 2024",
+      readTime: "6 horas",
+      category: "Capacitação",
+      image: workshopInovacaoImage
+    },
+    {
+      type: "noticia",
+      title: "Startup de AgTech recebe investimento de R$ 500 mil",
+      excerpt: "Empresa incubada desenvolve solução para otimização do uso da água na agricultura do sertão.",
+      date: "28 Jan 2024",
+      readTime: "4 min",
+      category: "Investimentos",
+      image: agtechStartupImage
+    },
+    {
+      type: "noticia",
+      title: "Plataforma de EdTech conecta estudantes rurais",
+      excerpt: "Solução desenvolvida por startup incubada já atende mais de 2.000 estudantes da região.",
+      date: "05 Fev 2024",
+      readTime: "5 min",
+      category: "Tecnologia",
+      image: edtechPlatformImage
     }
   ];
+
+  const categories = ["todas", "Parcerias", "Eventos", "Editais", "Capacitação", "Investimentos", "Tecnologia"];
+
+  const filteredNews = selectedCategory === "todas" 
+    ? news 
+    : news.filter(item => item.category === selectedCategory);
 
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -43,7 +89,7 @@ const NewsSection = () => {
   const getTypeColor = (type: string) => {
     switch (type) {
       case "noticia": return "bg-sertao-green/20 text-sertao-green border-sertao-green/30";
-      case "evento": return "bg-sertao-orange/20 text-sertao-orange border-sertao-orange/30";
+      case "evento": return "bg-sertao-blue/20 text-sertao-blue border-sertao-blue/30";
       case "processo": return "bg-sertao-yellow/20 text-sertao-yellow border-sertao-yellow/30";
       default: return "bg-muted text-muted-foreground";
     }
@@ -70,10 +116,40 @@ const NewsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {news.map((item, index) => (
-            <Card key={index} className="p-6 bg-background border-border/50 hover:shadow-soft transition-all duration-300 group">
-              <div className="flex items-center justify-between mb-4">
+        {/* Category Filter */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+            <Filter className="w-4 h-4" />
+            <span>Filtrar por categoria:</span>
+          </div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((category) => (
+              <Button
+                key={category}
+                variant={selectedCategory === category ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedCategory(category)}
+                className="capitalize"
+              >
+                {category}
+              </Button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredNews.map((item, index) => (
+            <Card key={index} className="overflow-hidden bg-background border-border/50 hover:shadow-soft transition-all duration-300 group">
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt={item.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
                 <Badge 
                   variant="outline" 
                   className={`${getTypeColor(item.type)} flex items-center gap-1`}
@@ -111,7 +187,8 @@ const NewsSection = () => {
               >
                 {item.type === "processo" ? "Ver Edital" : "Ler Mais"}
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                </Button>
+              </div>
             </Card>
           ))}
         </div>
@@ -134,9 +211,9 @@ const NewsSection = () => {
               />
               <Button variant="cta">
                 Inscrever-se
-              </Button>
-            </div>
-          </Card>
+                </Button>
+              </div>
+            </Card>
         </div>
       </div>
     </section>

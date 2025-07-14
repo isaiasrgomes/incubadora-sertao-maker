@@ -2,13 +2,20 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail } from "lucide-react";
 
+import anaPaulaImage from "@/assets/team/ana-paula.jpg";
+import carlosEduardoImage from "@/assets/team/carlos-eduardo.jpg";
+import mariaFernandaImage from "@/assets/team/maria-fernanda.jpg";
+import joaoPedroImage from "@/assets/team/joao-pedro.jpg";
+import luciaMendesImage from "@/assets/team/lucia-mendes.jpg";
+import rafaelCostaImage from "@/assets/team/rafael-costa.jpg";
+
 const TeamSection = () => {
   const team = [
     {
       name: "Ana Paula Santos",
       role: "Coordenadora Geral",
       bio: "Especialista em empreendedorismo e inovação com 15 anos de experiência no ecossistema de startups.",
-      image: "👩‍💼",
+      image: anaPaulaImage,
       linkedin: "#",
       email: "ana@sertaomaker.com"
     },
@@ -16,7 +23,7 @@ const TeamSection = () => {
       name: "Carlos Eduardo Silva",
       role: "Diretor de Programas",
       bio: "PhD em Administração com foco em desenvolvimento regional e sustentabilidade empresarial.",
-      image: "👨‍🎓",
+      image: carlosEduardoImage,
       linkedin: "#",
       email: "carlos@sertaomaker.com"
     },
@@ -24,7 +31,7 @@ const TeamSection = () => {
       name: "Maria Fernanda Lima",
       role: "Mentora de Tecnologia",
       bio: "CTO com 12 anos de experiência em desenvolvimento de produtos digitais e transformação digital.",
-      image: "👩‍💻",
+      image: mariaFernandaImage,
       linkedin: "#",
       email: "maria@sertaomaker.com"
     },
@@ -32,7 +39,7 @@ const TeamSection = () => {
       name: "João Pedro Oliveira",
       role: "Mentor de Negócios",
       bio: "Empreendedor serial e investidor anjo, especialista em modelos de negócio e captação de recursos.",
-      image: "👨‍💼",
+      image: joaoPedroImage,
       linkedin: "#",
       email: "joao@sertaomaker.com"
     },
@@ -40,7 +47,7 @@ const TeamSection = () => {
       name: "Lucia Mendes",
       role: "Coordenadora de Impacto",
       bio: "Especialista em impacto social e sustentabilidade, com experiência em ONGs e negócios sociais.",
-      image: "👩‍🌾",
+      image: luciaMendesImage,
       linkedin: "#",
       email: "lucia@sertaomaker.com"
     },
@@ -48,7 +55,7 @@ const TeamSection = () => {
       name: "Rafael Costa",
       role: "Analista de Projetos",
       bio: "Engenheiro de produção especializado em gestão de projetos e metodologias ágeis.",
-      image: "👨‍🔧",
+      image: rafaelCostaImage,
       linkedin: "#",
       email: "rafael@sertaomaker.com"
     }
@@ -62,14 +69,20 @@ const TeamSection = () => {
             Nossa Equipe
           </h2>
           <p className="text-lg text-muted-foreground">
-            Profissionais experientes dedicados ao sucesso das startups do semiárido
+            Profissionais experientes dedicados ao sucesso das startups do Sertão Central
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <Card key={index} className="p-6 text-center bg-gradient-card border-border/50 hover:shadow-soft transition-all duration-300 group">
-              <div className="text-6xl mb-4">{member.image}</div>
+              <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               
               <h3 className="text-xl font-semibold text-foreground mb-2">
                 {member.name}

@@ -67,7 +67,7 @@ export default {
 					earth: 'hsl(var(--sertao-earth))',
 					green: 'hsl(var(--sertao-green))',
 					yellow: 'hsl(var(--sertao-yellow))',
-					orange: 'hsl(var(--sertao-orange))'
+					blue: 'hsl(var(--sertao-blue))'
 				}
 			},
 			backgroundImage: {

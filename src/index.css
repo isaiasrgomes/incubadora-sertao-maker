@@ -41,10 +41,10 @@ All colors MUST be HSL.
     --sertao-earth: 25 65% 45%;
     --sertao-green: 120 35% 55%;
     --sertao-yellow: 48 95% 75%;
-    --sertao-orange: 20 85% 65%;
+    --sertao-blue: 210 55% 65%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--sertao-earth)), hsl(var(--sertao-orange)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--sertao-earth)), hsl(var(--sertao-blue)));
     --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--sertao-sand) / 0.1));
     
     /* Shadows */

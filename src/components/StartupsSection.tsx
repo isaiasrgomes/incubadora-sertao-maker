@@ -20,7 +20,7 @@ const StartupsSection = () => {
     {
       name: "EduSertão",
       category: "educacao",
-      description: "Plataforma de educação digital para estudantes do semiárido com conteúdo adaptado à realidade local.",
+      description: "Plataforma de educação digital para estudantes do Sertão Central com conteúdo adaptado à realidade local.",
       stage: "Incubada",
       logo: "🎓",
       website: "#"
@@ -104,7 +104,7 @@ const StartupsSection = () => {
             Startups Incubadas
           </h2>
           <p className="text-lg text-muted-foreground">
-            Conheça as startups que estão transformando o semiárido brasileiro
+            Conheça as startups que estão transformando o Sertão Central brasileiro
           </p>
         </div>
 
