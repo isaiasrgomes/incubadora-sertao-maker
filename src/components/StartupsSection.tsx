@@ -5,12 +5,11 @@ import { useState, useRef, useEffect } from "react";
 import { ExternalLink, Filter } from "lucide-react";
 import { startupDescription } from "./startupDescription";
 
-import nossaRocaLogo from "../assets/img/startupLogos/nossaRoca.png"
-
 const StartupsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("todas");
   const [expandedCards, setExpandedCards] = useState({});
   const [overflowCards, setOverflowCards] = useState({});
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const descRefs = useRef({});
 
@@ -35,6 +34,7 @@ const StartupsSection = () => {
 
   const startups = [
     {
+      id:1,
       name: "Nossa Roça",
       category: "agricultura",
       description: startupDescription.nossaRoca,
@@ -43,6 +43,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 2,
       name: "Aromas do Vale",
       category: "agricultura",
       description: startupDescription.aromasDoVale,
@@ -51,6 +52,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 3,
       name: "ArtEsfera",
       category: "artes_e_cultura",
       description: startupDescription.ArtEsfera,
@@ -59,6 +61,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 4,
       name: "Zilly",
       category: "construcao_civil",
       description: startupDescription.zilly,
@@ -67,6 +70,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 5,
       name: "Hibuddy",
       category: "educacao",
       description: startupDescription.hibuddy,
@@ -75,6 +79,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 6,
       name: "Desvenda",
       category: "turismo",
       description: startupDescription.desvenda,
@@ -83,6 +88,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 7,
       name: "SERA462",
       category: "educacao",
       description: startupDescription.sera462,
@@ -91,6 +97,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 8,
       name: "Rolê App",
       category: "turismo",
       description: startupDescription.roleApp,
@@ -99,6 +106,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 9,
       name: "Ser Fit",
       category: "alimentos",
       description: startupDescription.serFit,
@@ -107,6 +115,7 @@ const StartupsSection = () => {
       website: "#"
     },  
     {
+      id: 10,
       name: "Lamparina.Social",
       category: "educacao",
       description: startupDescription.lamparinaSocial,
@@ -115,6 +124,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 11,
       name: "Mype",
       category: "saude",
       description: startupDescription.mype,
@@ -123,6 +133,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 12,
       name: "Oxe, Comprei",
       category: "economia",
       description: startupDescription.oxeComprei,
@@ -131,6 +142,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 13,
       name: "Beyond the Arid",
       category: "agronegocio",
       description: startupDescription.beyondTheArid,
@@ -139,6 +151,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 14,
       name: "Avaliação econômica de Impacto e Resultados",
       category: "agricultura",
       description: startupDescription.avaliacaoEconomica,
@@ -147,6 +160,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 15,
       name: "Hub Criativo do Pajeú",
       category: "artes_e_cultura",
       description: startupDescription.hubPajeu,
@@ -155,6 +169,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 16,
       name: "Detekt AI",
       category: "seguranca_publica",
       description: startupDescription.detektAI,
@@ -163,6 +178,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 17,
       name: "Frete Gesso",
       category: "logistica",
       description: startupDescription.freteGesso,
@@ -171,6 +187,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 18,
       name: "Neureon",
       category: "saude",
       description: startupDescription.neureon,
@@ -179,6 +196,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 19,
       name: "Vitally",
       category: "saude",
       description: startupDescription.vitally,
@@ -187,6 +205,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 20,
       name: "Inovação sustentável para produtividade e economia",
       category: "agricultura",
       description: startupDescription.inovacaoSustentavelEco,
@@ -195,6 +214,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 21,
       name: "Eco Sol do Araripe",
       category: "energia_fotovoltaica",
       description: startupDescription.ecoSolDoAraripe,
@@ -203,6 +223,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 22,
       name: "Aceleração Digital BR (ADBR)",
       category: "ia",
       description: startupDescription.adbr,
@@ -211,6 +232,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 23,
       name: "Automatech",
       category: "automacao",
       description: startupDescription.automatech,
@@ -219,6 +241,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 24,
       name: "Salão Escola Beleza que Transforma",
       category: "educacao",
       description: startupDescription.SalãoEscolaBeleza,
@@ -227,6 +250,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 25,
       name: "AgroTronix",
       category: "automacao",
       description: startupDescription.agroTronix,
@@ -235,6 +259,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 26,
       name: "Rede Sertão Criativo",
       category: "artes_e_cultura",
       description: startupDescription.redeSertaoCriativo,
@@ -243,6 +268,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 27,
       name: "Equipamentos Didáticos Interativos (EDI)",
       category: "educacao",
       description: startupDescription.edi,
@@ -251,6 +277,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 28,
       name: "Agro Eventos",
       category: "agronegocio",
       description: startupDescription.agroEventos,
@@ -259,6 +286,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 29,
       name: "ZeaTech",
       category: "agricultura",
       description: startupDescription.ZeaTech,
@@ -267,6 +295,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 30,
       name: "Aquatech",
       category: "agricultura",
       description: startupDescription.aquatech,
@@ -275,6 +304,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 31,
       name: "EduHub",
       category: "educacao",
       description: startupDescription.eduHub,
@@ -283,6 +313,7 @@ const StartupsSection = () => {
       website: "#"
     },
     {
+      id: 32,
       name: "Agro Gestão e Consultoria",
       category: "agrogestao",
       description: startupDescription.agroGestaoConsultoria,
@@ -293,10 +324,13 @@ const StartupsSection = () => {
   
   ];
 
-  const filteredStartups =
+    const filteredStartups =
     selectedCategory === "todas"
       ? startups
       : startups.filter((startup) => startup.category === selectedCategory);
+
+  // Só mostra até visibleCount startups
+  const visibleStartups = filteredStartups.slice(0, visibleCount);
 
   const getStageColor = (stage) => {
     switch (stage) {
@@ -320,10 +354,21 @@ const StartupsSection = () => {
       }
     });
     setOverflowCards(newOverflow);
-  }, [filteredStartups]);
+  }, [visibleStartups]);
 
   const toggleExpand = (index) => {
     setExpandedCards((prev) => ({ ...prev, [index]: !prev[index] }));
+  };
+
+  // Mostrar mais startups
+  const showMore = () => {
+    setVisibleCount((prev) => prev + 6);
+  };
+
+  // Ao trocar categoria, resetar visibleCount para 6
+  const onCategoryChange = (categoryId) => {
+    setSelectedCategory(categoryId);
+    setVisibleCount(6);
   };
 
   return (
@@ -345,7 +390,7 @@ const StartupsSection = () => {
               key={category.id}
               variant={selectedCategory === category.id ? "default" : "outline"}
               size="sm"
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() => onCategoryChange(category.id)}
               className="transition-all duration-200"
             >
               {selectedCategory === category.id && (
@@ -358,15 +403,13 @@ const StartupsSection = () => {
 
         {/* Startups Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredStartups.map((startup, index) => (
+          {visibleStartups.map((startup, index) => (
             <Card
-              key={index}
+              key={startup.id}
               className="p-6 bg-background border-border/50 hover:shadow-soft transition-all duration-300 group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="text-3xl">{startup.logo}</div>
-
-                  {/*<img src={startup.logo} alt={`${startup.name} logo`} className="w-20 h-20" />* colocar imagem */}
                 <Badge
                   variant="outline"
                   className={getStageColor(startup.stage)}
@@ -417,6 +460,15 @@ const StartupsSection = () => {
             </Card>
           ))}
         </div>
+
+        {/* Botão Mostrar Mais */}
+        {visibleCount < filteredStartups.length && (
+          <div className="text-center mt-8">
+            <Button onClick={showMore} variant="outline">
+              Mostrar mais
+            </Button>
+          </div>
+        )}
 
         {/* CTA */}
         <div className="mt-16 text-center">
