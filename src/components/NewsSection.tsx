@@ -90,7 +90,7 @@ const NewsSection = () => {
     switch (type) {
       case "noticia": return "bg-sertao-green/20 text-sertao-green border-sertao-green/30";
       case "evento": return "bg-sertao-blue/20 text-sertao-blue border-sertao-blue/30";
-      case "processo": return "bg-sertao-yellow/20 text-sertao-yellow border-sertao-yellow/30";
+      case "processo": return "bg-sertao-earth/20 text-sertao-earth border-sertao-earth/30";
       default: return "bg-muted text-muted-foreground";
     }
   };

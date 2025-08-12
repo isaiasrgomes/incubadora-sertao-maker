@@ -127,7 +127,7 @@ const ProgramsSection = () => {
               {/* CTA Button */}
               <Button 
                 variant="cta" 
-                className="w-full group-hover:shadow-soft transition-all duration-300"
+                className="bg-primary w-full group-hover:shadow-soft transition-all  duration-300 hover:bg-primary/90 text-primary-foreground flex items-center justify-center"
               >
                 Inscrever-se
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

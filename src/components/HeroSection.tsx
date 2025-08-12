@@ -27,7 +27,7 @@ const HeroSection = () => {
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Transformamos ideias do sertão em{" "}
-            <span className="text-sertao-yellow">soluções para o mundo</span>
+            <span >soluções para o mundo</span>
           </h1>
 
           {/* Subtitle */}

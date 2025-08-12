@@ -5,7 +5,6 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/incubadora-sertao-maker/',
   server: {
     host: "::",
     port: 8080,

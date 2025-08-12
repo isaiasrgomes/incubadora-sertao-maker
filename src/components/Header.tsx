@@ -8,7 +8,7 @@ const Header = () => {
   const menuItems = [
     { label: "Início", href: "#inicio" },
     { label: "Sobre", href: "#sobre" },
-    { label: "Como Funciona", href: "#como-funciona" },
+    { label: "Como funciona", href: "#como-funciona" },
     { label: "Programas", href: "#programas" },
     { label: "Startups", href: "#startups" },
     { label: "Equipe", href: "#equipe" },
@@ -73,7 +73,7 @@ const Header = () => {
                 </a>
               ))}
               <div className="px-3 py-2">
-                <Button variant="cta" size="sm" className="w-full">
+                <Button variant="cta" size="sm" className="bg-primary w-full">
                   Candidatar-se
                 </Button>
               </div>

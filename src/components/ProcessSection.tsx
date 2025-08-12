@@ -7,31 +7,31 @@ const ProcessSection = () => {
       icon: Lightbulb,
       title: "Ideação",
       description: "Identificação e validação inicial de ideias inovadoras com potencial de impacto.",
-      color: "text-sertao-yellow"
+      color: "text-sertao-blue"
     },
     {
       icon: Users,
       title: "Mentorias e Treinamentos",
       description: "Acesso a especialistas e workshops sobre modelo de negócio, marketing e tecnologia.",
-      color: "text-sertao-green"
+      color: "text-sertao-blue"
     },
     {
       icon: Wrench,
       title: "Prototipagem",
       description: "Desenvolvimento de protótipos e MVPs com suporte técnico especializado.",
-      color: "text-sertao-orange"
+      color: "text-sertao-blue"
     },
     {
       icon: CheckCircle,
       title: "Validação de Mercado",
       description: "Testes com usuários reais e validação do produto-mercado fit.",
-      color: "text-primary"
+      color: "text-sertao-blue"
     },
     {
       icon: Rocket,
       title: "Incubação ou Aceleração",
       description: "Programa estruturado para crescimento e captação de investimentos.",
-      color: "text-sertao-earth"
+      color: "text-sertao-blue"
     }
   ];
 
