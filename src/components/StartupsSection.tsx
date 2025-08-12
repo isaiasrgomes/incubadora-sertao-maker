@@ -47,7 +47,7 @@ const StartupsSection = () => {
       category: "agricultura",
       description: startupDescription.aromasDoVale,
       stage: "Acelerada",
-      logo: "🌧️",
+      logo: "🌿",
       website: "#"
     },
     {
@@ -55,7 +55,7 @@ const StartupsSection = () => {
       category: "artes_e_cultura",
       description: startupDescription.ArtEsfera,
       stage: "Pré-incubada",
-      logo: "🏥",
+      logo: "🎭",
       website: "#"
     },
     {
@@ -63,7 +63,7 @@ const StartupsSection = () => {
       category: "construcao_civil",
       description: startupDescription.zilly,
       stage: "Incubada",
-      logo: "☀️",
+      logo: "🏗️",
       website: "#"
     },
     {
@@ -71,7 +71,7 @@ const StartupsSection = () => {
       category: "educacao",
       description: startupDescription.hibuddy,
       stage: "Acelerada",
-      logo: "💳",
+      logo: "📚",
       website: "#"
     },
     {
@@ -79,7 +79,7 @@ const StartupsSection = () => {
       category: "turismo",
       description: startupDescription.desvenda,
       stage: "Incubada",
-      logo: "💧",
+      logo: "🧳",
       website: "#"
     },
     {
@@ -87,7 +87,7 @@ const StartupsSection = () => {
       category: "educacao",
       description: startupDescription.sera462,
       stage: "Pré-incubada",
-      logo: "🌿",
+      logo: "📚",
       website: "#"
     },
     {
@@ -95,7 +95,7 @@ const StartupsSection = () => {
       category: "turismo",
       description: startupDescription.roleApp,
       stage: "Incubada",
-      logo: "💻",
+      logo: "🧳",
       website: "#"
     },
     {
@@ -103,7 +103,7 @@ const StartupsSection = () => {
       category: "alimentos",
       description: startupDescription.serFit,
       stage: "Incubada",
-      logo: "💻",
+      logo: "🍲",
       website: "#"
     },  
     {
@@ -111,7 +111,7 @@ const StartupsSection = () => {
       category: "educacao",
       description: startupDescription.lamparinaSocial,
       stage: "Incubada",
-      logo: "💻",
+      logo: "📚",
       website: "#"
     },
     {
@@ -119,9 +119,178 @@ const StartupsSection = () => {
       category: "saude",
       description: startupDescription.mype,
       stage: "Incubada",
+      logo: "🏥",
+      website: "#"
+    },
+    {
+      name: "Oxe, Comprei",
+      category: "economia",
+      description: startupDescription.oxeComprei,
+      stage: "Incubada",
+      logo: "💰",
+      website: "#"
+    },
+    {
+      name: "Beyond the Arid",
+      category: "agronegocio",
+      description: startupDescription.beyondTheArid,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "Avaliação econômica de Impacto e Resultados",
+      category: "agricultura",
+      description: startupDescription.avaliacaoEconomica,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "Hub Criativo do Pajeú",
+      category: "artes_e_cultura",
+      description: startupDescription.hubPajeu,
+      stage: "Incubada",
+      logo: "🎭",
+      website: "#"
+    },
+    {
+      name: "Detekt AI",
+      category: "seguranca_publica",
+      description: startupDescription.detektAI,
+      stage: "Incubada",
+      logo: "🛡️",
+      website: "#"
+    },
+    {
+      name: "Frete Gesso",
+      category: "logistica",
+      description: startupDescription.freteGesso,
+      stage: "Incubada",
+      logo: "🚚",
+      website: "#"
+    },
+    {
+      name: "Neureon",
+      category: "saude",
+      description: startupDescription.neureon,
+      stage: "Incubada",
+      logo: "🏥",
+      website: "#"
+    },
+    {
+      name: "Vitally",
+      category: "saude",
+      description: startupDescription.vitally,
+      stage: "Incubada",
+      logo: "🏥",
+      website: "#"
+    },
+    {
+      name: "Inovação sustentável para produtividade e economia",
+      category: "agricultura",
+      description: startupDescription.inovacaoSustentavelEco,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "Eco Sol do Araripe",
+      category: "energia_fotovoltaica",
+      description: startupDescription.ecoSolDoAraripe,
+      stage: "Incubada",
+      logo: "☀️",
+      website: "#"
+    },
+    {
+      name: "Aceleração Digital BR (ADBR)",
+      category: "ia",
+      description: startupDescription.adbr,
+      stage: "Incubada",
+      logo: "🤖",
+      website: "#"
+    },
+    {
+      name: "Automatech",
+      category: "automacao",
+      description: startupDescription.automatech,
+      stage: "Incubada",
       logo: "💻",
       website: "#"
     },
+    {
+      name: "Salão Escola Beleza que Transforma",
+      category: "educacao",
+      description: startupDescription.SalãoEscolaBeleza,
+      stage: "Incubada",
+      logo: "📚",
+      website: "#"
+    },
+    {
+      name: "AgroTronix",
+      category: "automacao",
+      description: startupDescription.agroTronix,
+      stage: "Incubada",
+      logo: "🤖",
+      website: "#"
+    },
+    {
+      name: "Rede Sertão Criativo",
+      category: "artes_e_cultura",
+      description: startupDescription.redeSertaoCriativo,
+      stage: "Incubada",
+      logo: "🎭",
+      website: "#"
+    },
+    {
+      name: "Equipamentos Didáticos Interativos (EDI)",
+      category: "educacao",
+      description: startupDescription.edi,
+      stage: "Incubada",
+      logo: "📚",
+      website: "#"
+    },
+    {
+      name: "Agro Eventos",
+      category: "agronegocio",
+      description: startupDescription.agroEventos,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "ZeaTech",
+      category: "agricultura",
+      description: startupDescription.ZeaTech,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "Aquatech",
+      category: "agricultura",
+      description: startupDescription.aquatech,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+    {
+      name: "EduHub",
+      category: "educacao",
+      description: startupDescription.eduHub,
+      stage: "Incubada",
+      logo: "📚",
+      website: "#"
+    },
+    {
+      name: "Agro Gestão e Consultoria",
+      category: "agrogestao",
+      description: startupDescription.agroGestaoConsultoria,
+      stage: "Incubada",
+      logo: "🌿",
+      website: "#"
+    },
+  
   ];
 
   const filteredStartups =
@@ -230,7 +399,6 @@ const StartupsSection = () => {
                   {expandedCards[index] ? "Ler menos" : "Ler mais"}
                 </Button>
               )}
-
               <div className="flex items-center justify-between">
                 <Badge
                   variant="secondary"
