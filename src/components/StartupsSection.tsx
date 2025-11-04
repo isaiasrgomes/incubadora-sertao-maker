@@ -2,14 +2,25 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState, useRef, useEffect } from "react";
-import { ExternalLink, Filter } from "lucide-react";
+import { ExternalLink, Filter, X } from "lucide-react";
+
 import { startupDescription } from "./startupDescription";
+import nossaRocaLogo from "../assets/img/startupLogos/nossa-roca.jpeg";
+import beyondTheAridLogo from "../assets/img/startupLogos/beyond-the-arid.jpeg";
+import detektaiLogo from "../assets/img/startupLogos/detektai.jpeg";
+import ecosolLogo from "../assets/img/startupLogos/ecosol.png";
+import freteGessoLogo from "../assets/img/startupLogos/frete-gesso.jpeg";
+import hubEduLogo from "../assets/img/startupLogos/hubedu.jpeg";
+import neureonLogo from "../assets/img/startupLogos/neureon.jpeg";
+import vitallyLogo from "../assets/img/startupLogos/vitally.jpeg";
+import zeatechLogo from "../assets/img/startupLogos/zeatech.jpeg";
 
 const StartupsSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("todas");
   const [expandedCards, setExpandedCards] = useState({});
   const [overflowCards, setOverflowCards] = useState({});
   const [visibleCount, setVisibleCount] = useState(6);
+  const [selectedStartup, setSelectedStartup] = useState(null);
 
   const descRefs = useRef({});
 
@@ -29,18 +40,18 @@ const StartupsSection = () => {
     { id: "logistica", label: "Logística" },
     { id: "saude", label: "Saúde" },
     { id: "seguranca_publica", label: "Segurança Pública" },
-    { id: "turismo", label: "Turismo" }
+    { id: "turismo", label: "Turismo" },
   ];
 
   const startups = [
     {
-      id:1,
+      id: 1,
       name: "Nossa Roça",
       category: "agricultura",
       description: startupDescription.nossaRoca,
       stage: "Incubada",
-      logo: "🌿",
-      website: "#"
+      logo: nossaRocaLogo,
+      website: "#",
     },
     {
       id: 2,
@@ -49,7 +60,7 @@ const StartupsSection = () => {
       description: startupDescription.aromasDoVale,
       stage: "Acelerada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
     {
       id: 3,
@@ -58,7 +69,7 @@ const StartupsSection = () => {
       description: startupDescription.ArtEsfera,
       stage: "Pré-incubada",
       logo: "🎭",
-      website: "#"
+      website: "#",
     },
     {
       id: 4,
@@ -67,7 +78,7 @@ const StartupsSection = () => {
       description: startupDescription.zilly,
       stage: "Incubada",
       logo: "🏗️",
-      website: "#"
+      website: "#",
     },
     {
       id: 5,
@@ -76,7 +87,7 @@ const StartupsSection = () => {
       description: startupDescription.hibuddy,
       stage: "Acelerada",
       logo: "📚",
-      website: "#"
+      website: "#",
     },
     {
       id: 6,
@@ -85,7 +96,7 @@ const StartupsSection = () => {
       description: startupDescription.desvenda,
       stage: "Incubada",
       logo: "🧳",
-      website: "#"
+      website: "#",
     },
     {
       id: 7,
@@ -94,7 +105,7 @@ const StartupsSection = () => {
       description: startupDescription.sera462,
       stage: "Pré-incubada",
       logo: "📚",
-      website: "#"
+      website: "#",
     },
     {
       id: 8,
@@ -103,7 +114,7 @@ const StartupsSection = () => {
       description: startupDescription.roleApp,
       stage: "Incubada",
       logo: "🧳",
-      website: "#"
+      website: "#",
     },
     {
       id: 9,
@@ -112,8 +123,8 @@ const StartupsSection = () => {
       description: startupDescription.serFit,
       stage: "Incubada",
       logo: "🍲",
-      website: "#"
-    },  
+      website: "#",
+    },
     {
       id: 10,
       name: "Lamparina.Social",
@@ -121,7 +132,7 @@ const StartupsSection = () => {
       description: startupDescription.lamparinaSocial,
       stage: "Incubada",
       logo: "📚",
-      website: "#"
+      website: "#",
     },
     {
       id: 11,
@@ -130,7 +141,7 @@ const StartupsSection = () => {
       description: startupDescription.mype,
       stage: "Incubada",
       logo: "🏥",
-      website: "#"
+      website: "#",
     },
     {
       id: 12,
@@ -139,7 +150,7 @@ const StartupsSection = () => {
       description: startupDescription.oxeComprei,
       stage: "Incubada",
       logo: "💰",
-      website: "#"
+      website: "#",
     },
     {
       id: 13,
@@ -147,8 +158,8 @@ const StartupsSection = () => {
       category: "agronegocio",
       description: startupDescription.beyondTheArid,
       stage: "Incubada",
-      logo: "🌿",
-      website: "#"
+      logo: beyondTheAridLogo,
+      website: "#",
     },
     {
       id: 14,
@@ -157,7 +168,7 @@ const StartupsSection = () => {
       description: startupDescription.avaliacaoEconomica,
       stage: "Incubada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
     {
       id: 15,
@@ -166,7 +177,7 @@ const StartupsSection = () => {
       description: startupDescription.hubPajeu,
       stage: "Incubada",
       logo: "🎭",
-      website: "#"
+      website: "#",
     },
     {
       id: 16,
@@ -174,8 +185,8 @@ const StartupsSection = () => {
       category: "seguranca_publica",
       description: startupDescription.detektAI,
       stage: "Incubada",
-      logo: "🛡️",
-      website: "#"
+      logo: detektaiLogo,
+      website: "#",
     },
     {
       id: 17,
@@ -183,8 +194,8 @@ const StartupsSection = () => {
       category: "logistica",
       description: startupDescription.freteGesso,
       stage: "Incubada",
-      logo: "🚚",
-      website: "#"
+      logo: freteGessoLogo,
+      website: "#",
     },
     {
       id: 18,
@@ -192,17 +203,17 @@ const StartupsSection = () => {
       category: "saude",
       description: startupDescription.neureon,
       stage: "Incubada",
-      logo: "🏥",
-      website: "#"
+      logo: neureonLogo,
+      website: "#",
     },
     {
       id: 19,
       name: "Vitally",
       category: "saude",
-      description: startupDescription.vitally,
+      description: startupDescription.vitally, // <- aqui você passa a variável importada
       stage: "Incubada",
-      logo: "🏥",
-      website: "#"
+      logo: vitallyLogo,
+      website: "#",
     },
     {
       id: 20,
@@ -211,7 +222,7 @@ const StartupsSection = () => {
       description: startupDescription.inovacaoSustentavelEco,
       stage: "Incubada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
     {
       id: 21,
@@ -219,8 +230,8 @@ const StartupsSection = () => {
       category: "energia_fotovoltaica",
       description: startupDescription.ecoSolDoAraripe,
       stage: "Incubada",
-      logo: "☀️",
-      website: "#"
+      logo: ecosolLogo,
+      website: "#",
     },
     {
       id: 22,
@@ -228,8 +239,8 @@ const StartupsSection = () => {
       category: "ia",
       description: startupDescription.adbr,
       stage: "Incubada",
-      logo: "🤖",
-      website: "#"
+      logo: "🤖", // <- aqui você passa a variável importada
+      website: "#",
     },
     {
       id: 23,
@@ -238,7 +249,7 @@ const StartupsSection = () => {
       description: startupDescription.automatech,
       stage: "Incubada",
       logo: "💻",
-      website: "#"
+      website: "#",
     },
     {
       id: 24,
@@ -247,7 +258,7 @@ const StartupsSection = () => {
       description: startupDescription.SalãoEscolaBeleza,
       stage: "Incubada",
       logo: "📚",
-      website: "#"
+      website: "#",
     },
     {
       id: 25,
@@ -256,7 +267,7 @@ const StartupsSection = () => {
       description: startupDescription.agroTronix,
       stage: "Incubada",
       logo: "🤖",
-      website: "#"
+      website: "#",
     },
     {
       id: 26,
@@ -265,7 +276,7 @@ const StartupsSection = () => {
       description: startupDescription.redeSertaoCriativo,
       stage: "Incubada",
       logo: "🎭",
-      website: "#"
+      website: "#",
     },
     {
       id: 27,
@@ -274,7 +285,7 @@ const StartupsSection = () => {
       description: startupDescription.edi,
       stage: "Incubada",
       logo: "📚",
-      website: "#"
+      website: "#",
     },
     {
       id: 28,
@@ -283,7 +294,7 @@ const StartupsSection = () => {
       description: startupDescription.agroEventos,
       stage: "Incubada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
     {
       id: 29,
@@ -291,8 +302,8 @@ const StartupsSection = () => {
       category: "agricultura",
       description: startupDescription.ZeaTech,
       stage: "Incubada",
-      logo: "🌿",
-      website: "#"
+      logo: zeatechLogo,
+      website: "#",
     },
     {
       id: 30,
@@ -301,16 +312,16 @@ const StartupsSection = () => {
       description: startupDescription.aquatech,
       stage: "Incubada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
     {
       id: 31,
-      name: "EduHub",
+      name: "HubEdu",
       category: "educacao",
       description: startupDescription.eduHub,
       stage: "Incubada",
-      logo: "📚",
-      website: "#"
+      logo: hubEduLogo,
+      website: "#",
     },
     {
       id: 32,
@@ -319,12 +330,11 @@ const StartupsSection = () => {
       description: startupDescription.agroGestaoConsultoria,
       stage: "Incubada",
       logo: "🌿",
-      website: "#"
+      website: "#",
     },
-  
   ];
 
-    const filteredStartups =
+  const filteredStartups =
     selectedCategory === "todas"
       ? startups
       : startups.filter((startup) => startup.category === selectedCategory);
@@ -372,14 +382,18 @@ const StartupsSection = () => {
   };
 
   return (
-    <section id="startups" className="py-20 bg-muted/30">
+    <section
+      id="startups"
+      className="py-20 bg-gradient-to-b from-background to-muted/20"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
             Startups Incubadas
           </h2>
           <p className="text-lg text-muted-foreground">
-            Conheça as startups que estão transformando o Sertão Central brasileiro
+            Conheça as startups que estão transformando o Sertão Central
+            brasileiro
           </p>
         </div>
 
@@ -402,17 +416,31 @@ const StartupsSection = () => {
         </div>
 
         {/* Startups Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
           {visibleStartups.map((startup, index) => (
             <Card
               key={startup.id}
-              className="p-6 bg-background border-border/50 hover:shadow-soft transition-all duration-300 group"
+              className="w-[90%] sm:w-[85%] md:w-[80%] max-w-[320px] p-6 
+                 bg-gradient-to-b from-background to-muted/40 
+                 border border-border/30 rounded-2xl shadow-soft 
+                 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
             >
-              <div className="flex items-start justify-between mb-4">
-                <div className="text-3xl">{startup.logo}</div>
+              <div className="flex flex-col items-center text-center mb-4">
+                <div className="relative w-20 h-20 mb-3">
+                  <img
+                    src={startup.logo}
+                    alt={startup.name}
+                    className="w-full h-full object-contain rounded-xl shadow-md border border-border/40 bg-white"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  {startup.name}
+                </h3>
                 <Badge
                   variant="outline"
-                  className={getStageColor(startup.stage)}
+                  className={`text-xs px-2 py-1 ${getStageColor(
+                    startup.stage
+                  )}`}
                 >
                   {startup.stage}
                 </Badge>
@@ -426,7 +454,7 @@ const StartupsSection = () => {
                 ref={(el) => (descRefs.current[index] = el)}
                 className="text-muted-foreground mb-2 leading-relaxed overflow-hidden transition-all duration-300"
                 style={{
-                  maxHeight: expandedCards[index] ? "1000px" : "96px"
+                  maxHeight: expandedCards[index] ? "1000px" : "96px",
                 }}
               >
                 {startup.description}
@@ -437,9 +465,9 @@ const StartupsSection = () => {
                   variant="link"
                   size="sm"
                   className="mb-4 p-0 h-auto text-primary"
-                  onClick={() => toggleExpand(index)}
+                  onClick={() => setSelectedStartup(startup)}
                 >
-                  {expandedCards[index] ? "Ler menos" : "Ler mais"}
+                  Ler mais
                 </Button>
               )}
               <div className="flex items-center justify-between">
@@ -464,7 +492,11 @@ const StartupsSection = () => {
         {/* Botão Mostrar Mais */}
         {visibleCount < filteredStartups.length && (
           <div className="text-center mt-8">
-            <Button onClick={showMore} variant="outline">
+            <Button
+              onClick={showMore}
+              variant="outline"
+              className="transform hover:scale-105 hover:shadow-md transition-all duration-300 ease-out"
+            >
               Mostrar mais
             </Button>
           </div>
@@ -486,6 +518,68 @@ const StartupsSection = () => {
           </div>
         </div>
       </div>
+
+      {selectedStartup && (
+        <div
+          key={selectedStartup.id}
+          className={`fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4
+              transition-opacity duration-300 
+              ${selectedStartup ? "opacity-100" : "opacity-0"}`}
+        >
+          <Card
+            className={`w-full max-w-xl p-6 relative transform transition-all duration-300 ease-out
+              ${
+                selectedStartup ? "scale-100 opacity-100" : "scale-90 opacity-0"
+              }`}
+          >
+            {/* Botão de fechar */}
+            <button
+              onClick={() => setSelectedStartup(null)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Conteúdo da startup */}
+            <div className="flex flex-col items-center text-center mb-4">
+              <div className="w-24 h-24 mb-3">
+                <img
+                  src={selectedStartup.logo}
+                  alt={selectedStartup.name}
+                  className="w-full h-full object-contain rounded-xl shadow-md border border-border/40 bg-white"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-foreground mb-2">
+                {selectedStartup.name}
+              </h3>
+              <Badge
+                variant="outline"
+                className={`text-xs px-2 py-1 ${getStageColor(
+                  selectedStartup.stage
+                )}`}
+              >
+                {selectedStartup.stage}
+              </Badge>
+            </div>
+
+            <p className="text-muted-foreground mb-4">
+              {selectedStartup.description}
+            </p>
+
+            <div className="flex justify-center">
+              <Button variant="ghost" size="sm" asChild>
+                <a
+                  href={selectedStartup.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4" /> Visitar site
+                </a>
+              </Button>
+            </div>
+          </Card>
+        </div>
+      )}
     </section>
   );
 };

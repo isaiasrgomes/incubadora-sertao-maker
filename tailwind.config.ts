@@ -76,7 +76,7 @@ export default {
 			},
 			boxShadow: {
 				'warm': 'var(--shadow-warm)',
-				'soft': 'var(--shadow-soft)'
+				'soft': "0 4px 14px rgba(0, 0, 0, 0.08)",
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -106,6 +106,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
 		}
+		
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
