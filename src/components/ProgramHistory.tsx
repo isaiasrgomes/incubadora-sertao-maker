@@ -10,9 +10,10 @@ export default function ProgramHistory() {
     <section id="historico" className="py-20 bg-gradient-to-b from-background to-muted/20 min-h-screen">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h1 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Histórico de Programas
-          </h1>
+          <h3 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+
+            Programas de Incubação Anteriores
+          </h3>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Todas as edições, startups participantes e um resumo de cada ciclo.
           </p>
