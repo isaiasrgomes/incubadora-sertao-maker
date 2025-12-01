@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState, useRef, useEffect } from "react";
 import { ExternalLink, Filter, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { startupDescription } from "./startupDescription";
 import nossaRocaLogo from "../assets/img/startupLogos/nossa-roca.jpeg";
@@ -382,10 +383,18 @@ const StartupsSection = () => {
   };
 
   return (
+
+    
+
     <section
       id="startups"
       className="py-20 bg-gradient-to-b from-background to-muted/20"
     >
+       {/* botão em algum lugar do topo ou CTA */}
+        {/*<Link to="/historico">
+          <Button variant="outline" className="ml-3">Histórico de Programas</Button>
+        </Link>*/}
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
