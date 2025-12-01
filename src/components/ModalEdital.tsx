@@ -6,8 +6,13 @@ export default function ModalEdital() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    // Abre o modal assim que a página carrega
-    setOpen(true);
+    // Verifica se já foi exibido na sessão
+    const alreadyShown = sessionStorage.getItem("modalEditalShown");
+
+    if (!alreadyShown) {
+      setOpen(true);
+      sessionStorage.setItem("modalEditalShown", "true");
+    }
   }, []);
 
   if (!open) return null;
