@@ -1,10 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroBanner from "@/assets/hero-banner.jpg";
+import ModalEdital from "@/components/ModalEdital";
+
 
 const HeroSection = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      
+      <ModalEdital />
+
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
